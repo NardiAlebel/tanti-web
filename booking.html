@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan Your Trip – Taniti</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">TANITI</a>
+      <nav class="nav" aria-label="Primary">
+        <button id="menuBtn" class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navList" class="nav-list">
+          <li><a href="index.html#activities">Activities</a></li>
+          <li><a href="index.html#dining">Dining</a></li>
+        
+          <li><a href="index.html#transportation">Transportation</a></li>
+          <li><a href="booking.html" class="btn btn-sm">Plan Trip</a></li>
+        </ul>
+      </nav>
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="Search…" aria-label="Search"/>
+        <button class="btn btn-sm" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h1>Reservation Inquiry</h1>
+    <p class="muted">Send us your trip preferences and we’ll follow up within 24 hours.</p>
+
+    <form class="form" onsubmit="return fakeSubmit(event)">
+      <div class="form-row">
+        <label for="location">Location</label>
+        <select id="location" required>
+          <option value="">Select location</option>
+          <option value="yellow-leaf-bay">Yellow Leaf Bay</option>
+          <option value="capital-coast">Capital Coast</option>
+          <option value="north-shore">North Shore</option>
+        </select>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="checkin">Check-in</label>
+          <input id="checkin" type="date" required />
+        </div>
+        <div>
+          <label for="checkout">Check-out</label>
+          <input id="checkout" type="date" required />
+        </div>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="guests">Guests</label>
+          <input id="guests" type="number" min="1" value="2" required />
+        </div>
+        <div>
+          <label for="type">Lodging Type</label>
+          <select id="type">
+            <option>Any</option>
+            <option>Hotel</option>
+            <option>Bed &amp; Breakfast</option>
+            <option>Vacation Rental</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="notes">Notes</label>
+        <textarea id="notes" rows="4" placeholder="Honeymoon trip, 5 days, quiet room, ocean view…"></textarea>
+      </div>
+      <button class="btn btn-lg" type="submit">Submit Inquiry</button>
+      <p id="formStatus" class="status" aria-live="polite"></p>
+    </form>
+
+    <section class="results">
+      <h2>Suggested Lodging</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Yellow Leaf Bay Resort</h3>
+          <p>Beachfront suites, honeymoon package available.</p>
+          <div class="meta"><span class="price">From $199/night</span></div>
+        </article>
+        <article class="card">
+          <h3>Bayview B&amp;B</h3>
+          <p>Cozy rooms with ocean views, breakfast included.</p>
+          <div class="meta"><span class="price">From $129/night</span></div>
+        </article>
+        <article class="card">
+          <h3>Coral Cove Villas</h3>
+          <p>Private villas with kitchenettes and pool access.</p>
+          <div class="meta"><span class="price">From $179/night</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Taniti Tourism Board</p>
+      <nav aria-label="Footer">
+        <a href="index.html#activities">Activities</a>
+        <a href="index.html#dining">Dining</a>
+        <a href="index.html#lodging">Lodging</a>
+        <a href="index.html#transportation">Transportation</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

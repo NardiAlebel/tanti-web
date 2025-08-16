@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taniti – Discover Paradise</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">TANITI</a>
+      <nav class="nav" aria-label="Primary">
+        <button id="menuBtn" class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#dining">Dining</a></li>
+         
+          <li><a href="#transportation">Transportation</a></li>
+          <li><a href="booking.html" class="btn btn-sm">Plan Trip</a></li>
+        </ul>
+      </nav>
+      <form class="search" role="search" onsubmit="return fakeSearch(event)">
+        <input id="searchInput" type="search" placeholder="Search activities, dining…" aria-label="Search"/>
+        <button class="btn btn-sm" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-media" role="img" aria-label="Beautiful Taniti island image placeholder">
+        <div class="placeholder-label"><img src="tanti.webp"></div>
+      </div>
+      <div class="hero-text">
+        <h1>Discover Paradise on Taniti</h1>
+        <p>Tropical beaches • Rainforests • Active volcano</p>
+        <a class="btn btn-lg" href="booking.html">Plan Your Trip</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-links">
+    <div class="container">
+      <h2>What Would You Like To Do?</h2>
+      <div class="grid grid-4" id="quickGrid">
+        <a class="card quick" href="#activities" data-keywords="beach water snorkeling fishing">
+          <div class="icon">🏖️</div>
+          <h3>Beaches & Water</h3>
+          <ul>
+            <li>Sandy beaches</li>
+            <li>Snorkeling</li>
+            <li>Fishing tours</li>
+          </ul>
+          <div class="price-chip">From $49</div>
+        </a>
+        <a class="card quick" href="#activities" data-keywords="volcano zipline hiking helicopter adventure">
+          <div class="icon">🌋</div>
+          <h3>Adventure</h3>
+          <ul>
+            <li>Volcano tours</li>
+            <li>Zip-lining</li>
+            <li>Hiking</li>
+          </ul>
+          <div class="price-chip">From $89</div>
+        </a>
+        <a class="card quick" href="#dining" data-keywords="local cuisine restaurants nightlife pubs food">
+          <div class="icon">🍽️</div>
+          <h3>Dining</h3>
+          <ul>
+            <li>Local cuisine</li>
+            <li>Restaurants</li>
+            <li>Nightlife</li>
+          </ul>
+          <div class="price-chip">$$ – $$$</div>
+        </a>
+        <a class="card quick" href="#lodging" data-keywords="hotels b&b vacation rentals stay">
+          <div class="icon">🏨</div>
+          <h3>Stay</h3>
+          <ul>
+            <li>Hotels</li>
+            <li>B&amp;Bs</li>
+            <li>Vacation rentals</li>
+          </ul>
+          <div class="price-chip">From $129/night</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="activities">
+    <div class="container">
+      <h2>Featured Experiences</h2>
+      <div class="grid grid-3" id="cardsGrid">
+        <article class="card" data-keywords="volcano tour adventure helicopter hiking">
+          <div class="media"><div class="ph"><span><img src="volc.webp"></span></div></div>
+          <div class="card-body">
+            <h3>Active Volcano Tours</h3>
+            <p>Experience Taniti’s active volcano with guided tours and helicopter rides.</p>
+            <div class="meta">
+              <span class="price">From $149</span>
+              
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="rainforest zip-line adventure wildlife">
+          <div class="media"><div class="ph"><span><img src="rain.webp"></span></div></div>
+          <div class="card-body">
+            <h3>Rainforest Adventures</h3>
+            <p>Zip-line through lush tropical rainforests and discover native wildlife.</p>
+            <div class="meta">
+              <span class="price">From $99</span>
+            
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="beach yellow leaf bay swimming relaxation water sports">
+          <div class="media"><div class="ph"><span><img src="yellow.webp"></span></div></div>
+          <div class="card-body">
+            <h3>Yellow Leaf Bay</h3>
+            <p>Pristine white sand beaches perfect for swimming, relaxation, and water sports.</p>
+            <div class="meta">
+              <span class="price">Free access</span>
+              
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="transport" id="transportation">
+    <div class="container">
+      <h2>Getting Around Taniti</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Airport Transfers</h3>
+          <p>Shuttle and taxi services from the airport to major hotels.</p>
+          <div class="meta"><span class="price">From $25/ride</span></div>
+        </div>
+        <div class="card">
+          <h3>Rental Cars</h3>
+          <p>Explore the island with compact and SUV options; great for families.</p>
+          <div class="meta"><span class="price">From $45/day</span></div>
+        </div>
+        <div class="card">
+          <h3>Public Transit</h3>
+          <p>Island buses on main routes; day passes available.</p>
+          <div class="meta"><span class="price">From $5/day</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dining" id="dining">
+    <div class="container">
+      <h2>Local Dining & Cultural Experiences</h2>
+      <div class="grid grid-3">
+        <div class="card" data-keywords="local fish rice restaurant traditional">
+          <h3>Fisherman’s Wharf</h3>
+          <p>Traditional Tanitian fish & rice with oceanfront seating.</p>
+          <div class="meta"><span class="price">$84</span></div>
+        </div>
+        <div class="card" data-keywords="seafood grill local cuisine">
+          <h3>Lagoon Grill</h3>
+          <p>Grilled seafood with locally sourced ingredients.</p>
+          <div class="meta"><span class="price">$90</span></div>
+        </div>
+        <div class="card" data-keywords="cultural dining show luau">
+          <h3>Island Night (Cultural Dining)</h3>
+          <p>Weekly cultural show & traditional dinner — a unique Taniti experience.</p>
+          <div class="meta"><span class="price">From $59</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Taniti Tourism Board</p>
+      <nav aria-label="Footer">
+        <a href="#activities">Activities</a>
+        <a href="#dining">Dining</a>
+        <a href="#lodging">Lodging</a>
+        <a href="#transportation">Transportation</a>
+        <a href="booking.html">Plan Trip</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
